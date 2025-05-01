@@ -36,7 +36,6 @@ public class Option {
         this.id = id;
     }
 
-
     public String getOption() {
         return option;
     }
