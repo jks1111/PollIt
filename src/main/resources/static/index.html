@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pollit – Simple Polling App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ✅ SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-green-50 min-h-screen flex items-center justify-center">
+
+<!-- Card Container -->
+<div class="bg-white rounded-2xl shadow-lg p-10 w-full max-w-md text-center">
+    <h1 class="text-3xl font-bold text-green-600 mb-4">
+        Welcome to Pollit <span>🗳️</span>
+    </h1>
+    <p class="text-gray-600 mb-6">
+        Create and vote on polls with ease. No fuss, just polling.
+    </p>
+
+    <button
+            class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition"
+            onclick="openPollit()"
+    >
+        Open Pollit
+    </button>
+</div>
+
+<!-- Script -->
+<script>
+    function openPollit() {
+        Swal.fire({
+            title: 'Redirecting...',
+            text: 'Taking you to the Pollit form!',
+            icon: 'success',
+            timer: 2000,
+            showConfirmButton: false,
+            timerProgressBar: true,
+            background: '#f0fdf4',
+            color: '#065f46'
+        }).then(() => {
+            window.location.href = '/pollit/pollit.html';
+        });
+    }
+</script>
+
+</body>
+</html>

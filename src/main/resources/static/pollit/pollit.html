@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PollIt - Simple Poll App</title>
+    <link rel="stylesheet" href="/pollit/style.css" />
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<h1>🗳️ PollIt - Poll App</h1>
+
+<!-- Create Poll Section -->
+<section>
+    <h2>Create a New Poll</h2>
+    <input type="text" id="question" placeholder="Enter your poll question" />
+    <div id="optionsContainer">
+        <input class="option-input" type="text" placeholder="Option 1" />
+        <input class="option-input" type="text" placeholder="Option 2" />
+    </div>
+    <button onclick="addOption()">Add Another Option</button>
+    <button onclick="createPoll()">Create Poll</button>
+    <p id="createResponse"></p>
+</section>
+
+<!-- Vote Section -->
+<section>
+    <h2>Vote on a Poll</h2>
+    <input type="text" id="votePollId" placeholder="Poll ID" />
+    <button onclick="loadPoll()">Load Poll</button>
+    <div id="voteArea"></div>
+</section>
+
+<!-- View Results Section -->
+<section>
+    <h2>View Poll Results</h2>
+    <input type="text" id="resultPollId" placeholder="Poll ID" />
+    <button onclick="viewResults()">View Results</button>
+    <div id="resultsArea"></div>
+</section>
+
+<script src="/pollit/script.js"></script>
+</body>
+</html>

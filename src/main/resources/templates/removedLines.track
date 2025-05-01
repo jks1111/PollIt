@@ -1,0 +1,18 @@
+@GetMapping("/polls")
+    public List<Poll> getPolls() {
+        return pollService.getAllPoll();
+    }
+
+     //@ElementCollection
+        //This way Hibernate will automatically create a separate table for the list options and link it to your Poll entity.
+
+//in service :
+
+public List<Poll> getAllPoll() {
+        return repo.findAll();
+    }
+
+    public Poll getPollById(int id) {
+
+            return repo.findById(id).orElse(null);
+        }
